@@ -4,6 +4,7 @@ import com.example.demo_maven_mybatis.domain.SampleDTO;
 import com.example.demo_maven_mybatis.domain.TodoDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -36,10 +37,28 @@ public class SampleController {
     }
 
     @GetMapping("/ex03")
-    public String ex01(TodoDTO todoDTO) {
+    public String ex03(TodoDTO todoDTO) {
         System.out.println("@GetMapping : /sample/ex03");
         System.out.println(todoDTO);
 
         return "ex03";
+    }
+
+    @GetMapping("/ex04")
+    public String ex04(SampleDTO sampleDTO,int page) {
+        System.out.println("@GetMapping : /sample/ex04");
+        System.out.println(sampleDTO);
+        System.out.println(page);
+
+        return "/sample/ex04";
+    }
+
+    @GetMapping("/ex04-2")
+    public String ex04_2(SampleDTO sampleDTO, @ModelAttribute("page") int page) {
+        System.out.println("@GetMapping : /sample/ex04-2");
+        System.out.println(sampleDTO);
+        System.out.println(page);
+
+        return "/sample/ex04-2";
     }
 }
