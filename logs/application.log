@@ -1,0 +1,5 @@
+2025-02-19 22:21:53 TRACE CommonExceptionAdvice:? - This is a TRACE level message
+2025-02-19 22:21:53 DEBUG CommonExceptionAdvice:30 - This is a DEBUG level message
+2025-02-19 22:21:53 INFO  CommonExceptionAdvice:31 - This is an INFO level message
+2025-02-19 22:21:53 WARN  CommonExceptionAdvice:32 - This is a WARN level message
+2025-02-19 22:21:53 ERROR CommonExceptionAdvice:33 - This is an ERROR level message
